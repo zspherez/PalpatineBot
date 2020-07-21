@@ -22,10 +22,10 @@ async def on_ready():
 @bot.event
 async def on_message(message):
     if message.author != bot.user:
-        if 'vandy' in message.content:
+        if 'vandy' in message.content.lower() or 'vanderbilt' in message.content.lower():
             await message.channel.send('fuck vandy')
             await message.channel.send('all my homies hate vandy')
-        elif ('palpatine' in message.content) or ('emperor' in message.content) or ('diermeier' in message.content) or ('chancellor' in message.content):
+        elif ('palpatine' in message.content.lower()) or ('emperor' in message.content.lower()) or ('diermeier' in message.content.lower()) or ('chancellor' in message.content.lower()):
             await message.channel.send('https://media.discordapp.net/attachments/699763540361478145/734157709770752131/image0.jpg')
 
 bot.run('NzM1MjY2NDQxMjA0MzM0NjYz.XxdwQw.rS-OMXxR-vyPllg1OmZx_ZlNjVo')

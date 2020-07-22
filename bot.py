@@ -23,10 +23,12 @@ async def on_ready():
 @bot.event
 async def on_message(message):
     if message.author != bot.user:
-        if 'vandy' in message.content.lower() or 'vanderbilt' in message.content.lower():
-            await message.channel.send('fuck vandy')
-            await message.channel.send('all my homies hate vandy')
-        elif ('palpatine' in message.content.lower()) or ('emperor' in message.content.lower()) or ('diermeier' in message.content.lower()) or ('chancellor' in message.content.lower()):
-            await message.channel.send('https://media.discordapp.net/attachments/699763540361478145/734157709770752131/image0.jpg')
+        if 'floor plan' in message.content.lower():
+            if 'commons' in message.content.lower():
+                await message.channel.send('Commons Floor Plans: https://discordapp.com/channels/678041940901625865/678067983376973845/735639699435159612')
+            elif 'towers' in message.content.lower():
+                await message.channel.send('Towers Floor Plans: https://discordapp.com/channels/678041940901625865/678067983376973845/735613872098246768')
+            elif 'branscomb' in message.content.lower():
+                await message.channel.send('Branscomb Floor Plans: https://discordapp.com/channels/678041940901625865/678067983376973845/725169006113325197')
 
 bot.run(os.environ['TOKEN'])

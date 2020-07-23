@@ -34,11 +34,14 @@ async def on_message(message):
         if 'https://groupme' in message.content.lower():
             await message.author.send('We do not allow advertising of GroupMe\'s in the Discord, your message has been deleted. If this is a house/floor GroupMe, please wait until the house channels have been created.')
             await message.delete()
-        if 'vandy' in message.content.lower() and random.randint(0,19) == 7:
-            await message.channel.send('fuck vandy')
-            await message.channel.send('all my homies hate vandy')
+        if 'vandy' in message.content.lower():
+            rand = random.randint(0, 14)
+            if rand == 7;
+                await message.channel.send('fuck vandy')
+                await message.channel.send('all my homies hate vandy')
         if 'emperor' in message.content.lower() or 'palpatine' in message.content.lower() or 'diermeier' in message.content.lower() or 'chancellor' in message.content.lower():
-            if random.randint(0,14) == 7:
+            rand = random.randint(0, 14)
+            if rand == 7:
                 await message.channel.send('https://media.discordapp.net/attachments/699763540361478145/734157709770752131/image0.jpg')
                 await message.channel.send('The Emperor is always watching...')
 

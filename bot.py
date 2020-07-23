@@ -37,6 +37,10 @@ async def on_message(message):
         if 'vandy' in message.content.lower() and random.randint(0,19) == 7:
             await message.channel.send('fuck vandy')
             await message.channel.send('all my homies hate vandy')
+        if 'emperor' in message.content.lower() or 'palpatine' in message.content.lower() or 'diermeier' in message.content.lower() or 'chancellor' in message.content.lower():
+            if random.randint(0,14) == 7:
+                await message.channel.send('https://media.discordapp.net/attachments/699763540361478145/734157709770752131/image0.jpg')
+                await message.channel.send('The Emperor is always watching...')
 
 
 bot.run(os.environ['TOKEN'])

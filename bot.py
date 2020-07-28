@@ -15,6 +15,8 @@ at = Airtable('appCYOvQRAC3kNBwp', api_key='keyBkVumCAYVGx3rI',table_name='Table
 at.get_all()
 print(at)
 
+bot.remove_command("help")
+
 @bot.event
 async def on_ready():
     await bot.change_presence(status=discord.Status.online,

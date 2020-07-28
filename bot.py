@@ -105,5 +105,5 @@ async def on_message(message):
                 await message.channel.send('The Emperor is always watching...')
     await bot.process_commands(message)
 
-bot.run('NzM1MjY2NDQxMjA0MzM0NjYz.XxdwQw.rS-OMXxR-vyPllg1OmZx_ZlNjVo')
+bot.run(os.environ['TOKEN'])
 

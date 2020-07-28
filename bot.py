@@ -7,7 +7,7 @@ import random
 from discord.ext import commands
 from airtable import Airtable
 
-client = commands.Bot(command_prefix='.')
+bot = commands.Bot(command_prefix='.')
 
 activity=True
 
@@ -15,17 +15,17 @@ at = Airtable('appCYOvQRAC3kNBwp', api_key='keyBkVumCAYVGx3rI',table_name='Table
 at.get_all()
 print(at)
 
-@client.event
+@bot.event
 async def on_ready():
     await bot.change_presence(status=discord.Status.online,
                                  activity=discord.Activity(name="your bank accounts drain.", type=3))
     print(f'{bot.user.name} is running...')
 
-@client.command()
+@bot.command()
 async def ping(ctx):
-    await ctx.send('Pong! {0}ms'.format(round(client.latency,2)*100))
+    await ctx.send('Pong! {0}ms'.format(round(bot.latency,2)*100))
 
-@client.command()
+@bot.command()
 async def aboutme(ctx):
     embed=discord.Embed(
         title = 'Emperor Palpatine',
@@ -43,9 +43,9 @@ async def aboutme(ctx):
     await ctx.send(embed=embed)
 
 
-@client.command()
+@bot.command()
 async def profile(ctx, *, arg):
-    await client.wait_until_ready()
+    await bot.wait_until_ready()
     records = at.search('Name', arg)
     user = ctx.message.author
     pfp = user.avatar_url
@@ -73,7 +73,7 @@ async def profile(ctx, *, arg):
 
         await ctx.send(embed=embed)
 
-@client.event
+@bot.event
 async def on_message(message):
     if message.author != bot.user:
         if 'floor plan' in message.content.lower():
@@ -103,7 +103,7 @@ async def on_message(message):
                 await message.channel.send(
                     'https://media.discordapp.net/attachments/699763540361478145/734157709770752131/image0.jpg')
                 await message.channel.send('The Emperor is always watching...')
-    await client.process_commands(message)
+    await bot.process_commands(message)
 
-client.run(TOKEN)
+bot.run('NzM1MjY2NDQxMjA0MzM0NjYz.XxdwQw.rS-OMXxR-vyPllg1OmZx_ZlNjVo')
 

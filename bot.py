@@ -25,7 +25,7 @@ async def on_ready():
 
 @bot.command()
 async def ping(ctx):
-    await ctx.send('Pong! {0}ms'.format(round(bot.latency,2)*100))
+    await ctx.send(f"Pong! {bot.latency * 1000:.03f}ms")
 
 @bot.command()
 async def help(ctx):

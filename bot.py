@@ -26,7 +26,7 @@ async def ping(ctx):
     await ctx.send('Pong! {0}ms'.format(round(bot.latency,2)*100))
 
 @bot.command()
-async def aboutme(ctx):
+async def help(ctx):
     embed=discord.Embed(
         title = 'Emperor Palpatine',
         description = 'A bot to serve Vanderbilt discord servers!',

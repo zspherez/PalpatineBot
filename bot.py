@@ -44,6 +44,14 @@ async def help(ctx):
 
     await ctx.send(embed=embed)
 
+@bot.command()
+async def newprofile(ctx):
+    embed=discord.Embed(
+        title = 'New Profile:',
+        description = 'Click this link to set up your profile: https://airtable.com/shrii04uLmlDBvXfm',
+        colour = discord.Colour.dark_gold()
+    )
+
 
 @bot.command()
 async def profile(ctx, *, arg):

@@ -35,12 +35,12 @@ async def help(ctx):
         colour = discord.Colour.dark_gold()
     )
 
-    embed.set_footer(text='Created July 2020 by thecolellis#0001.')
+    embed.set_footer(text='Created July 2020 by thecolellis#6969.')
     embed.set_thumbnail(url='https://cdn.discordapp.com/attachments/733788698277052438/733792565798764684/1200px-Vanderbilt_Commodores_logo.svg.png')
     embed.set_author(name='Emperor Palpatine#6411',icon_url='https://images-ext-2.discordapp.net/external/runjMvzmXx2Q7dRXkr7r48j6VQTBOiu-agSsMDySZdY/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/735266441204334663/b55eabc51240ca749f1f5d73a0e78463.png?width=681&height=681')
     embed.add_field(name='My prefix:',value='\"`.`\"',inline=True)
     embed.add_field(name='Need help?',value='Type `.help` for assistance!',inline=True)
-    embed.add_field(name='List of Commands',value='profile',inline=False)
+    embed.add_field(name='List of Commands',value='help \n newprofile \n ping \n profile',inline=False)
 
     await ctx.send(embed=embed)
 

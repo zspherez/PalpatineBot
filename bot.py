@@ -32,7 +32,7 @@ async def help(ctx):
     embed=discord.Embed(
         title = 'Emperor Palpatine',
         description = 'A bot to serve Vanderbilt discord servers!',
-        colour = discord.colour.dark_gold()
+        colour = discord.Colour.dark_gold()
     )
 
     embed.set_footer(text='Created July 2020 by thecolellis#0001.')

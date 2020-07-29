@@ -113,7 +113,7 @@ async def on_message(message):
                     'Branscomb Floor Plans: https://discordapp.com/channels/678041940901625865/678067983376973845/725169006113325197')
         if 'https://groupme' in message.content.lower():
             await message.author.send(
-                'We do not allow advertising of GroupMe\'s in the Discord, your message has been deleted. If this is a house/floor GroupMe, please wait until the house channels have been created.')
+                'We do not allow advertising of GroupMe\'s in the Discord, your message has been deleted.')
             await message.delete()
         if 'vandy' in message.content.lower():
             rand = random.randint(0, 14)

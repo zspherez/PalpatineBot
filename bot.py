@@ -52,7 +52,7 @@ async def help(ctx):
 async def newprofile(ctx):
     embed=discord.Embed(
         title = 'New Profile:',
-        description = 'Click this link to set up your profile: https://vandyinfo.tech/discordprofile',
+        description = 'Click this link to set up your profile: https://vandyinfo.tech/links/discordprofile',
         colour = discord.Colour.dark_gold()
     )
     await ctx.send(embed=embed)

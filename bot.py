@@ -54,6 +54,7 @@ async def newprofile(ctx):
     await ctx.send(embed=embed)
 
 
+
 @bot.command()
 async def profile(ctx, *, arg):
     await bot.wait_until_ready()

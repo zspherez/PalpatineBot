@@ -57,7 +57,7 @@ async def newprofile(ctx):
 @bot.command()
 async def profile(ctx, *, arg):
     await bot.wait_until_ready()
-    records = at.search('Name', arg.lower())
+    records = at.search('Name', arg)
     user = ctx.message.author
     pfp = user.avatar_url
     if not records:

@@ -48,7 +48,7 @@ async def help(ctx):
 async def newprofile(ctx):
     embed=discord.Embed(
         title = 'New Profile:',
-        description = 'Click this link to set up your profile: https://airtable.com/shrii04uLmlDBvXfm',
+        description = 'Click this link to set up your profile: https://vandyinfo.tech/discordprofile',
         colour = discord.Colour.dark_gold()
     )
     await ctx.send(embed=embed)
@@ -56,9 +56,12 @@ async def newprofile(ctx):
 
 
 @bot.command()
-async def profile(ctx, *, arg):
+async def profile(ctx, *, arg=None):
     await bot.wait_until_ready()
-    records = at.search('Name', arg.lower())
+    if not arg:
+        records = at.search('Discord username with Discriminator', ctx.message.author)
+    else:
+        records = at.search('Name', arg.lower())
     user = ctx.message.author
     pfp = user.avatar_url
     if not records:

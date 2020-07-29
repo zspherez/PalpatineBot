@@ -1,9 +1,11 @@
 import asyncio
-import requests
-import discord
 import json
 import os
 import random
+import re
+
+import discord
+import requests
 from discord.ext import commands
 from airtable import Airtable
 
@@ -11,6 +13,8 @@ bot = commands.Bot(command_prefix='.')
 
 activity=True
 
+fgm = r"https?://(www.)?groupme"  # fuck groupme
+ 
 at = Airtable(os.environ['AT'], api_key=os.environ['ATKEY'],table_name='Table 1')
 at.get_all()
 print(at)
@@ -114,7 +118,7 @@ async def on_message(message):
             elif 'branscomb' in message.content.lower():
                 await message.channel.send(
                     'Branscomb Floor Plans: https://discordapp.com/channels/678041940901625865/678067983376973845/725169006113325197')
-        if 'https://groupme' in message.content.lower():
+        if re.search(fgm, message.content.lower()):  # match groupme link
             await message.author.send(
                 'We do not allow advertising of GroupMe\'s in the Discord, your message has been deleted.')
             await message.delete()

@@ -59,7 +59,7 @@ async def newprofile(ctx):
 async def profile(ctx, *, arg=None):
     await bot.wait_until_ready()
     if not arg:
-        records = at.search('Discord username with Discriminator', ctx.message.author)
+        records = at.search('Discord username with Discriminator', str(ctx.message.author))
     else:
         records = at.search('Name', arg.lower())
     user = ctx.message.author
@@ -134,4 +134,3 @@ async def on_message(message):
     await bot.process_commands(message)
 
 bot.run(os.environ['TOKEN'])
-

@@ -11,7 +11,7 @@ bot = commands.Bot(command_prefix='.')
 
 activity=True
 
-at = Airtable('appCYOvQRAC3kNBwp', api_key='keyBkVumCAYVGx3rI',table_name='Table 1')
+at = Airtable(os.environ['AT'], api_key=os.environ['ATKEY'],table_name='Table 1')
 at.get_all()
 print(at)
 

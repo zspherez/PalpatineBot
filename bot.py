@@ -103,7 +103,7 @@ async def profile(ctx, *, arg=None):
 
 @bot.event
 async def on_message(message):
-    if message.author != bot.user:
+    if not message.author.bot:
         if 'floor plan' in message.content.lower():
             if 'commons' in message.content.lower():
                 await message.channel.send(

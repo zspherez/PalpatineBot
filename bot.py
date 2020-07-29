@@ -80,7 +80,20 @@ async def profile(ctx, *, arg):
         embed.add_field(name='Room Number', value=info['Room Number'], inline=True)
         embed.add_field(name='VU Visions Group', value=info['VU Visions Group'], inline=True)
         embed.add_field(name='Introduction',value=info['Introduction'],inline=False)
-        embed.add_field(name='Socials',value='Snapchat: http://snapchat.com/add/' + info['Socials: Snapchat'] + ' \n Instagram: http://instagram.com/' + info['Socials: Instagram'] + ' \n Linkedin: ' + info['Socials: LinkedIn'],inline=False)
+        snap = False
+        insta = False
+        if 'None Provided' not in info['Socials: Snapchat']:
+            snap = True
+        if 'None Provided' not in info['Socials: Instagram']:
+            insta = True
+        if snap and insta:
+            embed.add_field(name='Socials',value='Snapchat: http://snapchat.com/add/' + info['Socials: Snapchat'] + ' \n Instagram: http://instagram.com/' + info['Socials: Instagram'] + ' \n Linkedin: ' + info['Socials: LinkedIn'],inline=False)
+        elif snap:
+            embed.add_field(name='Socials',value='Snapchat: http://snapchat.com/add/' + info['Socials: Snapchat'] + ' \n Instagram: ' + info['Socials: Instagram'] + ' \n Linkedin: ' + info['Socials: LinkedIn'],inline=False)
+        elif insta:
+            embed.add_field(name='Socials',value='Snapchat: ' + info['Socials: Snapchat'] + ' \n Instagram: http://instagram.com/' + info['Socials: Instagram'] + ' \n Linkedin: ' + info['Socials: LinkedIn'],inline=False)
+
+
 
         await ctx.send(embed=embed)
 

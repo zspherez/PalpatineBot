@@ -146,6 +146,8 @@ async def on_message(message):
                 await message.channel.send(
                     'https://media.discordapp.net/attachments/699763540361478145/734157709770752131/image0.jpg')
                 await message.channel.send('The Emperor is always watching...')
+        if bot.user in message.mentions:
+            await message.channel.send('no :)')
     await bot.process_commands(message)
 
 bot.run(os.environ['TOKEN'])

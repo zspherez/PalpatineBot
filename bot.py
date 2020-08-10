@@ -125,8 +125,8 @@ async def on_message(message):
         if 'vandy' in message.content.lower():
             rand = random.randint(0, 14)
             arand = random.randint(0,29)
-            print('arand: '+rand)
-            print('rand: '+rand)
+            print(f"rand: {rand}")
+            print(f"arand: {arand}")
             if rand == 7 and message.author.id != 472229397085290506:
                 await message.channel.send('fuck vandy')
                 await message.channel.send('all my homies hate vandy')

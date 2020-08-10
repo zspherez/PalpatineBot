@@ -108,6 +108,10 @@ async def profile(ctx, *, arg=None):
 @bot.event
 async def on_message(message):
     if not message.author.bot:
+        if 'he is always watching' in message.content.lower():
+            await message.channel.send(
+                    'https://media.discordapp.net/attachments/699763540361478145/734157709770752131/image0.jpg')
+            await message.channel.send('The Emperor is always watching...')     
         if 'floor plan' in message.content.lower():
             if 'commons' in message.content.lower():
                 await message.channel.send(

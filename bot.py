@@ -130,7 +130,7 @@ async def on_message(message):
             if rand == 7 and message.author.id != 472229397085290506:
                 await message.channel.send('fuck vandy')
                 await message.channel.send('all my homies hate vandy')
-            if arand == 15 and message.author.id != 472229397085290506:
+            if arand == 15 and message.author.id == 472229397085290506:
                 await message.channel.send('fuck vandy')
                 await message.channel.send('all my homies hate vandy')
             if arand == 7 and message.author.id == 472229397085290506:

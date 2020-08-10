@@ -65,7 +65,7 @@ async def profile(ctx, *, arg=None):
     user = ctx.message.author
     pfp = user.avatar_url
     if not records:
-        await ctx.send("User not found!")
+        await ctx.send("User not found! Reminder that the bot only updates once daily.")
     else:
         info = (records[0]['fields'])
 
@@ -120,10 +120,17 @@ async def on_message(message):
             await message.delete()
         if 'vandy' in message.content.lower():
             rand = random.randint(0, 14)
-            print(rand)
-            if rand == 7:
+            arand = random.randint(0,29)
+            print('arand: '+rand)
+            print('rand: '+rand)
+            if rand == 7 and message.author.id != 472229397085290506:
                 await message.channel.send('fuck vandy')
                 await message.channel.send('all my homies hate vandy')
+            if arand == 15 and message.author.id != 472229397085290506:
+                await message.channel.send('fuck vandy')
+                await message.channel.send('all my homies hate vandy')
+            if arand == 7 and message.author.id == 472229397085290506:
+                await message.channel.send('i would\'ve said it if it wasnt alissa smh')
         if 'emperor' in message.content.lower() or 'palpatine' in message.content.lower() or 'diermeier' in message.content.lower() or 'chancellor' in message.content.lower():
             rand = random.randint(0, 14)
             print(rand)

@@ -150,7 +150,6 @@ async def on_message(message):
             await message.channel.send('no :)')
         if message.channel.id == 692841868777750638:
             await message.add_reaction('\N{THUMBS UP SIGN}')
-            print('test')
             await message.add_reaction('\N{THUMBS DOWN SIGN}')
     await bot.process_commands(message)
 

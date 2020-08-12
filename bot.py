@@ -148,6 +148,9 @@ async def on_message(message):
                 await message.channel.send('The Emperor is always watching...')
         if bot.user in message.mentions:
             await message.channel.send('no :)')
+        if message.channel == 692841868777750638:
+            message.add_reaction('\N{THUMBS UP SIGN}')
+            message.add_reaction('\N{THUMBS DOWN SIGN}')
     await bot.process_commands(message)
 
 bot.run(os.environ['TOKEN'])

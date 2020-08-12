@@ -137,7 +137,7 @@ async def on_message(message):
             if arand == 15 and message.author.id == 472229397085290506:
                 await message.channel.send('fuck vandy')
                 await message.channel.send('all my homies hate vandy')
-            if rand == 7 and message.author.id == 472229397085290506:
+            if rand == 7 and arand != 15 and message.author.id == 472229397085290506:
                 await message.channel.send('i would\'ve said it if it wasnt alissa smh')
         if 'emperor' in message.content.lower() or 'palpatine' in message.content.lower() or 'diermeier' in message.content.lower() or 'chancellor' in message.content.lower():
             rand = random.randint(0, 14)

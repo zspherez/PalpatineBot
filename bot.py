@@ -12,8 +12,6 @@ from airtable import Airtable
 bot = commands.Bot(command_prefix='.')
 
 activity=True
-
-fgm = r"https?://(www.)?groupme"  # fuck groupme
  
 at = Airtable(os.environ['AT'], api_key=os.environ['ATKEY'],table_name='Table 1')
 at.get_all()
@@ -122,11 +120,7 @@ async def on_message(message):
             elif 'branscomb' in message.content.lower():
                 await message.channel.send(
                     'Branscomb Floor Plans: https://discordapp.com/channels/678041940901625865/678067983376973845/725169006113325197')
-        if re.search(fgm, message.content.lower()):  # match groupme link
-            await message.author.send('We do not allow advertising of GroupMe\'s in the Discord, your message has been deleted.')
-            await message.delete()
-            f_groupme = await message.channel.send('fuck groupme')
-            await f_groupme.delete()
+
         if 'vandy' in message.content.lower():
             rand = random.randint(0, 14)
             arand = random.randint(0,29)

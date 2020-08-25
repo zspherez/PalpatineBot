@@ -166,6 +166,9 @@ async def on_message(message):
         if message.channel.id == 692841868777750638:
             await message.add_reaction('\N{THUMBS UP SIGN}')
             await message.add_reaction('\N{THUMBS DOWN SIGN}')
+        # diya rocks 
+        if message.author.id == 607733264022765568:
+            await message.add_reaction('<:diyarocks:747953745278533725>')
     await bot.process_commands(message)
 
 

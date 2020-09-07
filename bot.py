@@ -166,6 +166,10 @@ async def on_message(message):
         if message.channel.id == 692841868777750638:
             await message.add_reaction('\N{THUMBS UP SIGN}')
             await message.add_reaction('\N{THUMBS DOWN SIGN}')
+        if 'sam' in message.content.lower() and 'admin' in message.content.lower():
+            await message.delete()
+        if 'admin' in message.content.lower() and 'abuse' in message.content.lower():
+            await message.delete()
     await bot.process_commands(message)
 
 

@@ -129,7 +129,7 @@ async def on_message(message):
             print(f"vrand: {vrand}")
             if vrand == 8:
                 await message.channel.send('no <3')             
-            await bot.send_message(user, "new message")
+            await user.send("new message")
             
         if 'he is always watching' in message.content.lower():
             await message.channel.send(

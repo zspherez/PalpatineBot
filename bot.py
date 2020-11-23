@@ -123,6 +123,14 @@ async def profile(ctx, *, arg=None):
 @bot.event
 async def on_message(message):
     if not message.author.bot:
+        if message.author.id == 700233926085443645:
+            user = bot.get_user(214508201624862731)
+            vrand = random.randint(0,16)
+            print(f"vrand: {vrand}")
+            if vrand == 8:
+                await message.channel.send('no <3')             
+            await bot.send_message(user, "new message")
+            
         if 'he is always watching' in message.content.lower():
             await message.channel.send(
                 'https://media.discordapp.net/attachments/699763540361478145/734157709770752131/image0.jpg')

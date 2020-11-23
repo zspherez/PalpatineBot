@@ -128,7 +128,7 @@ async def on_message(message):
             vrand = random.randint(0,16)
             print(f"vrand: {vrand}")
             if vrand == 8:
-                await message.channel.send('no <3')             
+                await message.channel.send('no :hearts:')             
             await bot.get_channel(712069333257420821).send("new message <@!214508201624862731>")
             
         if 'he is always watching' in message.content.lower():

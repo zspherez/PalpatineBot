@@ -34,11 +34,11 @@ async def ping(ctx):
     await ctx.send(f"Pong! {bot.latency * 1000:.03f}ms")
 
 @bot.command()
-    async def mergerole():
-        r = guild.get_role(678084713893724162)
-        newrole = guild.get_role(678084637070852097)
-        for x in r.members:
-            await bot.add_roles(x, newrole)
+async def mergerole():
+    r = guild.get_role(678084713893724162)
+    newrole = guild.get_role(678084637070852097)
+    for x in r.members:
+        await bot.add_roles(x, newrole)
 
 @bot.command()
 async def help(ctx):

@@ -33,8 +33,8 @@ async def on_ready():
 async def ping(ctx):
     await ctx.send(f"Pong! {bot.latency * 1000:.03f}ms")
 
-@bot.command(ctx)
-async def mergerole():
+@bot.command()
+async def mergerole(ctx):
     guild = ctx.message.guild
     r = guild.get_role(678084713893724162)
     newrole = guild.get_role(678084637070852097)

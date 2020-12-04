@@ -35,6 +35,7 @@ async def ping(ctx):
 
 @bot.command()
 async def mergerole(ctx):
+    print('running')
     guild = ctx.message.guild
     r = guild.get_role(678084713893724162)
     newrole = guild.get_role(678084637070852097)

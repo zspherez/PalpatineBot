@@ -33,6 +33,12 @@ async def on_ready():
 async def ping(ctx):
     await ctx.send(f"Pong! {bot.latency * 1000:.03f}ms")
 
+@bot.command()
+    async def mergerole():
+        r = guild.get_role(678084713893724162)
+        newrole = guild.get_role(678084637070852097)
+        for x in r.members:
+            await bot.add_roles(x, newrole)
 
 @bot.command()
 async def help(ctx):
@@ -122,7 +128,7 @@ async def profile(ctx, *, arg=None):
 
 @bot.event
 async def on_message(message):
-    if not message.author.bot:
+    if not message.author.bot:        
         if message.author.id == 700233926085443645:
             user = bot.get_user(214508201624862731)
             vrand = random.randint(0,16)

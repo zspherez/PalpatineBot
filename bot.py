@@ -10,6 +10,8 @@ from discord.ext import commands
 from discord.utils import get
 from airtable import Airtable
 
+print(discord.__version__)
+
 intents = discord.Intents().all()
 bot = discord.Bot(prefix='.', intents=intents)
 

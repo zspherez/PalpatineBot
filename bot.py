@@ -10,7 +10,8 @@ from discord.ext import commands
 from discord.utils import get
 from airtable import Airtable
 
-bot = commands.Bot(command_prefix='.')
+intents = discord.Intents().all()
+bot = commands.Bot(command_prefix='.', intents=intents)
 
 activity = True
 

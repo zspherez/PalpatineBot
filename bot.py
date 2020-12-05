@@ -46,7 +46,7 @@ async def mergerole(ctx):
         print(member)
         if r in member.roles:
             print('to add')
-            await bot.add_roles(member, newrole)
+            await member.add_roles(member, newrole)
             print(member + 'adding')
     print('done')
         

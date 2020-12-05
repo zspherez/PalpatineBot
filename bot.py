@@ -39,9 +39,9 @@ async def mergerole(ctx):
     guild = ctx.message.guild
     print(guild)
     r = guild.get_role(678084713893724162)
-    print(r)
+    print(r.members)
     newrole = guild.get_role(678084637070852097)
-    print(newrole)
+    print(newrole.members)
     for member in r.members:
         print(member)
         print('to add')

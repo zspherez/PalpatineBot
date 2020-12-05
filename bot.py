@@ -11,7 +11,7 @@ from discord.utils import get
 from airtable import Airtable
 
 intents = discord.Intents().all()
-bot = commands.Bot(command_prefix='.', intents=intents)
+bot = discord.Bot(prefix='.', intents=intents)
 
 activity = True
 

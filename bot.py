@@ -41,7 +41,7 @@ async def mergerole(ctx):
     print(r)
     newrole = get(ctx.guild.roles, name="Committed")
     print(newrole)
-    for member in guild.members:
+    for member in ctx.guild.members:
         print(member)
         if role in member.roles:
             print('to add')

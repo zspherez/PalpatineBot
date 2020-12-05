@@ -37,9 +37,9 @@ async def ping(ctx):
 @bot.command(pass_context=True)
 async def mergerole(ctx):
     print('running')
-    r = get(ctx.server.roles, name="Accepted")
+    r = get(ctx.message.guild.roles, name="Accepted")
     print(r)
-    newrole = get(ctx.server.roles, name="Committed")
+    newrole = get(ctx.guild.roles, name="Committed")
     print(newrole)
     for member in guild.members:
         print(member)

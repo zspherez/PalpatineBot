@@ -13,7 +13,7 @@ from airtable import Airtable
 print(discord.__version__)
 
 intents = discord.Intents().all()
-bot = discord.commands(command_prefix='.', intents=intents)
+bot = commands.Bot(command_prefix='.', intents=intents)
 
 activity = True
 

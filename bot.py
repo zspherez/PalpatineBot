@@ -39,14 +39,14 @@ async def mergerole(ctx):
     print('running')
     r = get(ctx.message.guild.roles, name="Accepted")
     print(r)
-    newrole = get(ctx.guild.roles, name="Committed")
+    newrole = get(ctx.message.guild.roles, name="Committed")
     print(newrole)
-    for member in ctx.guild.members:
+    for member in ctx.message.guild.members:
         print(member)
         if r in member.roles:
             print('to add')
             await member.add_roles(newrole)
-            print(member + 'adding')
+            print('adding')
     print('done')
         
         

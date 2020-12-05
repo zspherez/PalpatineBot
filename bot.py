@@ -33,20 +33,18 @@ async def on_ready():
 async def ping(ctx):
     await ctx.send(f"Pong! {bot.latency * 1000:.03f}ms")
 
-@bot.command()
+@bot.command(pass_context=True)
 async def mergerole(ctx):
     print('running')
-    guild = ctx.message.guild
-    print(guild)
-    r = guild.get_role(678084713893724162)
+    r = get(ctx.server.roles, name="Accepted")
     print(r)
-    newrole = guild.get_role(678084637070852097)
+    newrole = get(ctx.server.roles, name="Committed")
     print(newrole)
     for member in guild.members:
         print(member)
-        if guild.get_role(678084713893724162) in member.roles:
+        if role in member.roles:
             print('to add')
-            await member.add_roles(member, newrole)
+            await member.add_roles(newrole)
             print(member + 'adding')
     print('done')
         

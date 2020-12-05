@@ -43,7 +43,9 @@ async def mergerole(ctx):
     newrole = guild.get_role(678084637070852097)
     print(newrole)
     for member in ctx.message.guild.members:
+        print(member)
         if r in member.roles:
+            print('to add')
             await bot.add_roles(member, newrole)
             print(member + 'adding')
     print('done')

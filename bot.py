@@ -46,7 +46,7 @@ async def mergerole(ctx):
         print(member)
         if guild.get_role(678084713893724162) in member.roles:
             print('to add')
-            await member.add_roles(member, guild.get_role(678084637070852097))
+            await member.add_roles(member, newrole)
             print(member + 'adding')
     print('done')
         

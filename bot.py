@@ -51,8 +51,8 @@ async def mergerole(ctx):
             await member.add_roles(newrole)
             print('adding')
     print('done')
-        
-        
+
+
 
 @bot.command()
 async def help(ctx):
@@ -142,15 +142,15 @@ async def profile(ctx, *, arg=None):
 
 @bot.event
 async def on_message(message):
-    if not message.author.bot:        
+    if not message.author.bot:
         if message.author.id == 700233926085443645:
             user = bot.get_user(214508201624862731)
             vrand = random.randint(0,16)
             print(f"vrand: {vrand}")
             if vrand == 8:
-                await message.channel.send('no :hearts:')             
+                await message.channel.send('no :hearts:')
             await bot.get_channel(712069333257420821).send("another one <@!214508201624862731>")
-            
+
         if 'he is always watching' in message.content.lower():
             await message.channel.send(
                 'https://media.discordapp.net/attachments/699763540361478145/734157709770752131/image0.jpg')
@@ -165,6 +165,37 @@ async def on_message(message):
             elif 'branscomb' in message.content.lower():
                 await message.channel.send(
                     'Branscomb Floor Plans: https://discordapp.com/channels/678041940901625865/678067983376973845/725169006113325197')
+            elif 'cole' in message.content.lower():
+                await message.channel.send(
+                'Cole Floor Plans: https://discord.com/channels/678041940901625865/678067983376973845/795025289142468668')
+            elif 'mayfield' in message.content.lower():
+                await message.channel.send(
+                'Mayfield Floor Plans: https://discord.com/channels/678041940901625865/678067983376973845/795025614439579648')
+            elif 'mcgill' in message.content.lower():
+                await message.channel.send(
+                'McGill Floor Plans: https://discord.com/channels/678041940901625865/678067983376973845/795025696556056596')
+            elif 'mctyeire' in message.content.lower():
+                await message.channel.send(
+                'McTyeire Floor Plans: https://discord.com/channels/678041940901625865/678067983376973845/795025735365427200')
+            elif 'morgan' in message.content.lower() or 'lewis' in message.content.lower():
+                await message.channel.send(
+                'Morgan and Lewis Floor Plans: https://discord.com/channels/678041940901625865/678067983376973845/795025783772676127')
+            elif 'tolman' in message.content.lower():
+                await message.channel.send(
+                'Tolman Floor Plans: https://discord.com/channels/678041940901625865/678067983376973845/795025842953912330')
+            elif 'warren' in message.content.lower() or 'moore' in message.content.lower() or 'kissam' in message.content.lower():
+                await message.channel.send(
+                'Warren and Moore (Kissam) Floor Plans: https://discord.com/channels/678041940901625865/678067983376973845/795027155074416701')
+            elif 'ebi' in message.content.lower():
+                await message.channel.send(
+                'EBI Floor Plans: https://discord.com/channels/678041940901625865/678067983376973845/795039142743900181')
+            elif 'zeppos' in message.content.lower():
+                await message.channel.send(
+                'Zeppos Floor Plans: https://discord.com/channels/678041940901625865/678067983376973845/795038705073127455')
+            elif 'highland' in message.content.lower():
+                await message.channel.send(
+                '''Highland Floor Plans (Mayfield): https://discord.com/channels/678041940901625865/678067983376973845/795025614439579648
+                   Highland Floor Plans (Morgan and Lewis): https://discord.com/channels/678041940901625865/678067983376973845/795025783772676127''')
         if re.search(fgm, message.content.lower()) and message.channel.id != 747890842819231815:  # match groupme link and check not wrong channel
             await message.author.send(
                 'We do not allow the posting of GroupMe links outside of the <#747890842819231815> channel, please repost your link there.')
